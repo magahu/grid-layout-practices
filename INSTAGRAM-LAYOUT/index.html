@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram layout</title>
+    <style>
+    .body{
+        margin: 0;
+        padding: 0;
+    }
+    .post-container{
+       display: grid; 
+       grid-template-columns: repeat(3, minmax(100px, 293px));
+       justify-content: center;
+       grid-gap: 28px;
+    }
+    .post-overlay{
+        background-color: rgba(0,0,0, 0.4);
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+    }
+    .post{
+        cursor: pointer;
+        display: block;
+        position: relative; 
+    }
+    .post:hover .post-overlay{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .post-img{
+        vertical-align: top;
+        width: 100%;
+    }
+    .post-likes, .post-comments{
+        margin: 15px;
+    }
+    @media screen and (max-width: 768px){
+        .post-container{
+            grid-gap: 3px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <section class="post-container">
+        <div class="post">
+            <img class="post-img" src="IMAGES/flower.jpg">
+            <span class="post-overlay">
+                <p class="post-likes">10</p>
+                <p class="post-comments">3</p>
+            </span>
+        </div>
+        <div class="post">
+            <img class="post-img" src="IMAGES/flower.jpg">
+            <span class="post-overlay">
+                <p class="post-likes">10</p>
+                <p class="post-comments">3</p>
+            </span>
+        </div>
+        <div class="post">
+            <img class="post-img" src="IMAGES/flower.jpg">
+            <span class="post-overlay">
+                <p class="post-likes">10</p>
+                <p class="post-comments">3</p>
+            </span>
+        </div>
+        <div class="post">
+            <img class="post-img" src="IMAGES/flower.jpg">
+            <span class="post-overlay">
+                <p class="post-likes">10</p>
+                <p class="post-comments">3</p>
+            </span>
+        </div>
+        <div class="post">
+            <img class="post-img" src="IMAGES/flower.jpg">
+            <span class="post-overlay">
+                <p class="post-likes">10</p>
+                <p class="post-comments">3</p>
+            </span>
+        </div>
+        <div class="post">
+            <img class="post-img" src="IMAGES/flower.jpg">
+            <span class="post-overlay">
+                <p class="post-likes">10</p>
+                <p class="post-comments">3</p>
+            </span>
+        </div>
+    </section>   
+</body>
+</html>

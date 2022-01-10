@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREAS</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            border: 3px solid indianred;
+            display:grid;
+            height: 100vh;
+            /*
+            grid-template-columns: 30% 30% 30%;
+            grid-template-rows: 500px;
+            grid-template: rows / columns;
+            */
+            grid-template: 1fr 50% 1fr / 25% 1fr;
+            /*
+            grid-row: 3%;
+            grid.column: 20%;
+            */
+            /*grid-gap: 3% 10%;*/
+            grid-gap: 2%;
+            grid-template-areas: "header header"
+                                 "left-content right-content"
+                                 "footer footer";
+        }
+        .item{
+            border: 1px solid indianred;
+            background-color: rgb(55, 241, 55);
+            width: 100%;
+        }
+        .item:nth-of-type(4){
+            background-color: rgb(253, 232, 44);
+            overflow: auto;
+            /*display: subgrid; NO FUNCIONA CORRECTAMENTE*/
+            /*display: inline-grid; NO FUNCIONA CORRECTAMENTE*/
+            display: grid;
+            grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        }
+        .item .item{
+            background-color: blue;
+            color: white;
+        }
+        .header{
+            grid-area: header;
+        }
+        .left{
+            grid-area: left-content;
+        }
+        .rigth{
+            grid-area: right-content;
+        }
+        .footer{
+            grid-area: footer;
+        }
+      
+    </style>
+    <section class="container">
+        <div class="item header">HEADER</div>
+        <div class="item left-content">LEFT</div>
+        <div class="item right-content">RIGTH</div>
+        <div class="item footer">
+            <div class="item">FOOTER ELEMENT</div>
+            <div class="item">FOOTER ELEMENT</div>
+            <div class="item">FOOTER ELEMENT</div>
+            <div class="item">FOOTER ELEMENT</div>
+            <div class="item">FOOTER ELEMENT</div>
+            <div class="item">FOOTER ELEMENT</div>
+            <div class="item">FOOTER ELEMENT</div>
+            <div class="item">FOOTER ELEMENT</div>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAP</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            border: 3px solid indianred;
+            display:grid;
+            /*
+            grid-template-columns: 30% 30% 30%;
+            grid-template-rows: 500px;
+            grid-template: rows / columns;
+            */
+            grid-template: 500px 100px / 20% 20% 20%;
+            /*
+            grid-row: 3%;
+            grid.column: 20%;
+            */
+            grid-gap: 3% 20%;
+        }
+        .item{
+            border: 3px solid indianred;
+            background-color: rgb(55, 241, 55);
+        }
+        .item:nth-of-type(4){
+            background-color: rgb(253, 232, 44);
+            overflow: auto;
+            /*display: subgrid; NO FUNCIONA CORRECTAMENTE*/
+            /*display: inline-grid; NO FUNCIONA CORRECTAMENTE*/
+            display: grid;
+            grid-template: 60px 60px / 100px 100px;
+        }
+        .item .item{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <section class="container">
+        <div class="item">contenido #1</div>
+        <div class="item">contenido #2</div>
+        <div class="item">contenido #3</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+            <div class="item">subitem #6</div>
+            <div class="item">subitem #7</div>
+            <div class="item">subitem #8</div>
+        </div>
+        <div class="item">contenido #5</div>
+        <div class="item">contenido #6</div>
+        <div class="item">contenido #7</div>
+        <div class="item">contenido #8</div>
+        <div class="item">contenido #9</div>
+        <div class="item">contenido #10</div>
+        <div class="item">contenido #11</div>
+        <div class="item">contenido #12</div>
+    </section>
+    
+</body>
+</html>

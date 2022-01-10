@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINES WITH NAME</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            border: 3px solid indianred;
+            display:grid;
+            height: 100vh;
+            /*grid-template: repeat(2, 200px) / repeat(7, 1fr); */
+            grid-template-columns: [inicio] 1fr
+                                   [line2] 1fr
+                                   [line3] 1fr
+                                   [endf1] 1fr
+                                   [line5] 1fr
+                                   [endf2] 1fr
+                                   [line7] 1fr
+                                   [final];
+            grid-template-rows: [inicio] 200px [medio] 200px [final]; 
+        }
+        .item{
+            border: 5px solid rgb(14, 243, 205);
+            background-color: rgb(246, 12, 83);
+        } 
+        .item:nth-of-type(1){
+            grid-column: inicio / endf1;
+            grid-row: inicio / final;
+        }
+        .item:nth-of-type(2){
+            grid-column: endf1 / endf2;
+            grid-row: inicio /final;
+        }
+        .item:nth-of-type(3){
+            grid-column: endf2 / final;
+        }
+    </style>
+
+    <section class="container">
+        <div class="item">Element #1</div>
+        <div class="item">Element #2</div>
+        <div class="item">Element #3</div>
+        <div class="item">Element #4</div>
+        <div class="item">Element #5</div>
+    </section>
+    
+</body>
+</html>

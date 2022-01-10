@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PInterest layout</title>
+</head>
+<body>
+    <style>
+        .body{
+            margin: 0;
+        }
+        .pics-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 350px);
+            justify-content: center;
+            align-content: center;
+            grid-gap: 10px;
+        }
+        .pic{
+            width: 100%;
+        }
+        .pic-container{
+            background-color: rgb(34, 30, 247);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .level1{
+            grid-row-end: span 3;
+        }
+        .level2{
+            grid-row-end: span 2;
+        }
+        .level3{
+            grid-row-end: span 1;
+        }
+    </style>
+    <div class="pics-container">
+        <div class="pic-container level1">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+        </div>
+        <div class="pic-container level2">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+            
+        </div>
+        <div class="pic-container level3">
+            <img class="pic" src="IMAGES/flower.jpg">
+        </div>
+        <div class="pic-container level1">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+        </div>
+        <div class="pic-container level2">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+        </div>
+        <div class="pic-container level3">
+            <img class="pic" src="IMAGES/flower.jpg">
+        </div>
+        <div class="pic-container level1">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+        </div>
+        <div class="pic-container level2">
+            <img class="pic" src="IMAGES/flower.jpg">
+            <img class="pic" src="IMAGES/flower.jpg">
+            
+        </div>
+        <div class="pic-container level3">
+            <img class="pic" src="IMAGES/flower.jpg">
+        </div>
+    </div> 
+</body>
+</html>
